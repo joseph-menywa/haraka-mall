@@ -1,6 +1,7 @@
 package com.bondi.haraka_mall.ui.theme.screens.form1
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -46,6 +47,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.bondi.haraka_mall.navigation.ROUT_ITEM
+import com.bondi.haraka_mall.navigation.ROUT_LOGIN
 import com.bondi.haraka_mall.ui.theme.darkblue
 import com.bondi.haraka_mall.ui.theme.neworange
 import com.bondi.haraka_mall.ui.theme.red
@@ -152,6 +154,7 @@ fun Form1Screen( navController: NavController){
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.sp,)
                         Text(text = "LogIn ",
+                            modifier = Modifier.clickable { navController.navigate(ROUT_LOGIN) },
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.sp,
                             color = neworange

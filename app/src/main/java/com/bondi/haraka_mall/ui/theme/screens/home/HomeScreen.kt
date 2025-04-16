@@ -76,7 +76,7 @@ fun HomeScreen( navController: NavController){
 
 
           )
-      { Text(text = "Add to cut") }
+      { Text(text = "Add to cart") }
 
 
   }}

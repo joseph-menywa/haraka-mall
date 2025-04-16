@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.bondi.haraka_mall.R
+import com.bondi.haraka_mall.navigation.ROUT_LOGIN
 import com.bondi.haraka_mall.navigation.ROUT_START
 import com.bondi.haraka_mall.ui.theme.newblue
 
@@ -37,12 +38,6 @@ import kotlinx.coroutines.launch
 @SuppressLint("CoroutineCreationDuringComposition")
 @Composable
 fun SplashScreen( navController: NavController){
-    //Navigation
-    val coroutine = rememberCoroutineScope()
-    coroutine.launch {
-        delay(2000)
-        navController.navigate(ROUT_START)
-    }
 
 
     Column (modifier = Modifier
@@ -53,6 +48,16 @@ fun SplashScreen( navController: NavController){
 
 
     ){
+
+
+
+        //Navigation
+        val coroutine = rememberCoroutineScope()
+        coroutine.launch {
+            delay(2000)
+            navController.navigate(ROUT_LOGIN)
+        }
+
         Image(
             painter = painterResource(R.drawable.furniture3),
             contentDescription = "home",

@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.play.services.analytics.impl)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -63,6 +64,19 @@ dependencies {
     implementation ("androidx.room:room-runtime:2.6.1")
     kapt ("androidx.room:room-compiler:2.6.1")
     implementation ("androidx.room:room-ktx:2.6.1")
+
+
+    // Image Loading (Coil for Jetpack Compose)
+    implementation ("io.coil-kt:coil-compose:2.4.0")
+    
+    
+    //livedata
+    implementation ("androidx.compose.runtime:runtime-livedata:1.6.4")
+
+
+
+    implementation ("com.google.android.gms:play-services-analytics-impl:18.2.0")
+
 
 }
 
